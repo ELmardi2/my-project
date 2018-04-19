@@ -1,19 +1,19 @@
 @extends('defaults.default')
 
-@section('title', 'show-history')
+@section('title', 'show-history') <!--section page title -->
 
-@section('content')
+@section('content') <!--start content section -->
 <div class="card">
     <div class="card-header">
-        <h1>{{$hitory->title}}</h1>
+        <h1>{{$history->title}}</h1>
     </div>
     <div class="card-body">
         <p>
             {{$history->details}}
         </p>
-        <span>
-            {{$history->add_by}}
-        </span>
+    </div>
+    <div class="card-header">
+        <h3>{{$history->added_by}}</h3>
     </div>
 </div>
-@stop
+@stop <!--end content section -->

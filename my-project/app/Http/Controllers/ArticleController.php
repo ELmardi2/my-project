@@ -95,7 +95,8 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         $article->delete();
-        //return redirect(route('articles.index'));
-        return 'article has been deleted';
+        session()->flash('message', 'your article has been deleted');
+        return redirect(route('articles.index'));
+        
     }
 }

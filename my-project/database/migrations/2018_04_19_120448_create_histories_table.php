@@ -17,7 +17,6 @@ class CreateHistoriesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('details');
-            $table->string('added_by');
             $table->timestamps();
         });
     }
