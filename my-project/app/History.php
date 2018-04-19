@@ -8,5 +8,5 @@ use App\History;
 
 class History extends Model
 {
-    //
+    protected $guarded=[];
 }

@@ -14,7 +14,8 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        //
+        $histories = History::all();
+        return view('histories.index', ['histories' =>$histories]);
     }
 
     /**
@@ -46,7 +47,7 @@ class HistoryController extends Controller
      */
     public function show(History $history)
     {
-        //
+        return view('histories.show', ['history' => $history]);
     }
 
     /**
