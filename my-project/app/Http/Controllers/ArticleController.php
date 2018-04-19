@@ -40,10 +40,7 @@ class ArticleController extends Controller
             'title' => 'required | min: 4',
             'details' => 'required | min: 10'
         ]);
-       Article::create([
-           'title' =>$request->title,
-           'details' =>$request->details,
-       ]);
+       Article::create($request->all());
        session()->flash('message', 'your Article has been successfully added');
        return redirect(route('articles.index'));//
     }

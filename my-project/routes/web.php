@@ -15,5 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route to Articles all actions
 Route::resource('articles', 'ArticleController');
+
+//Route to Historis all actions
+Route::resource('histories', 'HistoryController');
 
